@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioTrack NUPIT</title>
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#e74c3c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="apple-touch-icon" href="assets/icon-144x144.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>BioTrack</h1>
+    <p>Monitoramento de Culturas Celulares</p>
+  </header>
+
+  <main>
+    <section id="contador">
+      Culturas Ativas: <span id="contadorValor">0</span>
+    </section>
+
+    <ul id="lista-culturas"></ul>
+
+    <button id="nova-cultura">Nova Cultura</button>
+  </main>
+
+  <!-- Modal de cadastro -->
+  <div class="modal" id="modal-form">
+    <div class="modal-content">
+      <h2>Cadastro</h2>
+
+      <label for="input-nome">Nome da Linhagem</label>
+      <input type="text" id="input-nome" placeholder="ex: SH-SY5Y" />
+
+      <label for="input-meio">Meio de Cultivo</label>
+      <input type="text" id="input-meio" placeholder="ex: DMEM/F12" />
+
+      <label for="input-data">Data de Início</label>
+      <input type="date" id="input-data" max="" />
+
+      <label for="input-responsavel">Responsável</label>
+      <input type="text" id="input-responsavel" placeholder="Seu nome" />
+
+      <div class="modal-buttons">
+        <button id="btn-save" class="btn-save">Salvar</button>
+        <button id="btn-cancel" class="btn-cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
